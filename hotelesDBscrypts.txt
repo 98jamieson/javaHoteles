@@ -1,0 +1,62 @@
+CREATE TABLE roles(
+rol_id int PRIMARY Key AUTO_INCREMENT,
+nombre varchar(30)
+)
+
+CREATE TABLE usuarios(
+usuario_id int(11) PRIMARY KEY AUTO_INCREMENT,
+nombre varchar(20),
+apellido varchar(20),
+telefono int(8),
+direccion varchar(70),
+email varchar(30),
+nacimiento date,
+rol_id int,
+activo int,
+contrasenia varchar(20),
+ FOREIGN KEY (rol_id) REFERENCES roles(rol_id)
+)
+
+
+INSERT INTO roles(nombre)VALUES ('administrador')
+INSERT INTO roles(nombre)VALUES ('vendedor')
+
+
+
+
+INSERT INTO usuarios(nombre,apellido,telefono,direccion,email,nacimiento,rol_id,activo,contrasenia)
+VALUES('Katrinka', 'mcDonald', 66366636,'zona 1 guatemala', 'Katrinka@email.com',CURDATE(),1,1,'pass1')
+
+
+
+INSERT INTO usuarios(nombre,apellido,telefono,direccion,email,nacimiento,rol_id,activo,contrasenia)
+VALUES('Felizio', 'hill', 66366636,'zona 1 guatemala', 'Felizio@email.com',CURDATE(),2,1,'pass2')
+
+INSERT INTO usuarios(nombre,apellido,telefono,direccion,email,nacimiento,rol_id,activo,contrasenia)
+VALUES('Arnie', 'Collings', 55996633,'zona 1 villa nueva', 'Arnie@email.com',CURDATE(),2,1,'Pass3')
+
+INSERT INTO usuarios(nombre,apellido,telefono,direccion,email,nacimiento,rol_id,activo,contrasenia)
+VALUES('Arnie', 'Collings', 55996633,'zona 1 mixco', 'Arnie@email.com',CURDATE(),2,1,'Pass3')
+
+
+INSERT INTO usuarios(nombre,apellido,telefono,direccion,email,nacimiento,rol_id,activo,contrasenia)
+VALUES('Laurens', 'rooney', 11223344,'zona 8 mixco', 'Laurens@email.com',CURDATE(),2,1,'Pass4')
+
+
+
+INSERT INTO usuarios(nombre,apellido,telefono,direccion,email,nacimiento,rol_id,activo,contrasenia)
+VALUES('Sanford', 'Roy', 44885511,'mazatenango zona 2', 'Sanford@email.com',CURDATE(),1,1,'pass5')
+
+
+
+
+
+INSERT INTO usuarios(nombre,apellido,telefono,direccion,email,nacimiento,rol_id,activo,contrasenia)
+VALUES('Test', 'test', 44885511,'mazatenango zona 2', 'Sanford@email.com','1998-06-06',1,1,'pass5')
+
+
+
+
+
+
+
